@@ -1,0 +1,170 @@
+/* Stylesheet for Healthcare Watch */
+
+/* Reset Stylesheet */
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+.georama-bold {
+  font-family: "Georama", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.parkinsans-semi-bold {
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.parkinsans-regular {
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Variables */
+:root {
+    --gradient:linear-gradient(90deg,#0B5E4A, #0D5A62 50%, #0E577A 75%, #114FAA);
+    --peacock-green:#0B5E4A;
+    --ocean-blue:#114FAA;
+}
+
+/* Heading Styles */
+h1 {
+    font-family: "Georama", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    font-size:3rem;
+}
+
+h2 {
+    font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size:2rem;
+}
+
+header {
+    background:var(--gradient);
+    color:white;
+}
+
+header a {
+    color:white;
+    text-decoration:none;
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size:2rem;
+}
+ 
+/* Body */
+body {
+    font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size:1rem;
+  line-height:1.8; 
+}
+
+aside {
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size:1rem;
+}
+ul.aside-list {
+    list-style-image:url(../images/arrow-marker.svg);
+    padding:0 25% 0 25%;
+}
+
+article.card {
+    border:2px solid var(--ocean-blue); 
+    border-radius:10px;
+}
+main a {
+    color:black;
+    text-decoration:none;
+}
+
+main a:hover {
+    text-decoration:underline;
+}
+
+.button,
+button {
+    background:var(--gradient);
+    color:white;
+    text-decoration:none;
+    padding:10px 45px 10px 45px;
+    border-radius: 30px;
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size:2rem;
+}
+
+.button:hover {
+    text-decoration:none;
+}
+
+/* Images */
+img {
+    display:block;
+    border-radius:15px;
+}
+
+/* Footer */
+footer {
+    background:var(--gradient);
+    color:white;
+}
+
+.footer-semi-bold {
+    color:white;
+    text-decoration:none;
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size:1rem;
+}
+
+.footer-regular {
+    color:white;
+    text-decoration:none;
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size:0.875rem;;
+}
+
+footer a:hover {
+    text-decoration:underline;
+}
+
+address {
+    font-style:normal;
+    line-height:2;
+    font-size:0.875rem;
+}
