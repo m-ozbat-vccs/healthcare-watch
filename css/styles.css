@@ -121,6 +121,9 @@ button {
 /* Images */
 img {
     display:block;
+}
+
+.rounded-corners {
     border-radius:15px;
 }
 
