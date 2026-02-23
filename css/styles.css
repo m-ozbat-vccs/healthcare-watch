@@ -159,3 +159,16 @@ address {
     line-height:2;
     font-size:0.875rem;
 }
+
+/*===================
+    Desktop Styles
+=====================*/
+@media (min-width:768px) {
+    .mobile-only {
+        display:none;
+    }
+}
+
+/*===================
+    Mobile Styles
+=====================*/
