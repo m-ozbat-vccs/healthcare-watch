@@ -1,13 +1,14 @@
-/* Stylesheet for Healthcare Watch */
+/* Stylesheet for Healthcare Watch
+Marisa Ozbat - 2026 */
 
-/* Reset Stylesheet */
+/* ===RESET STYLESHEET=== */
 * {
     padding:0;
     margin:0;
     box-sizing:border-box;
 }
-/* Fonts */
 
+/* ===FONTS=== */
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
 
 @font-face {
@@ -29,17 +30,19 @@
   font-weight: 400;
   font-style: normal;
 }
-/* Variables */
+
+/* ===VARIABLES=== */
 :root {
     --gradient:linear-gradient(90deg,#0B5E4A, #0D5A62 50%, #0E577A 75%, #114FAA);
     --peacock-green:#0B5E4A;
     --ocean-blue:#114FAA;
 }
 
-/* Heading Styles */
+/* ===HEADINGS=== */
 h1 {
     font-family: "Georama", sans-serif; 
     font-size:3rem;
+    text-align:center;
 }
 
 h2 {
@@ -62,10 +65,28 @@ header a {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    font-size:2rem;
+    font-size:clamp(1.125rem, calc(0.950rem + 0.875vw), 2.000rem);
 }
- 
-/* Body */
+
+/* ===NAV=== */
+
+nav ul {
+    list-style-type:none;
+}
+
+ul.nav-wrapper {
+    display:grid;
+    grid-template-columns:repeat(6, auto) 3fr repeat(3, auto);
+    min-height:8rem;
+    padding:2rem 1rem 0 1rem;
+    gap:1.75rem;
+}
+
+li.search-bar {
+    align-self:center;
+}
+
+/* ===BODY=== */
 body {
     font-family: "Parkinsans", sans-serif;
   font-optical-sizing: auto;
@@ -75,6 +96,9 @@ body {
   line-height:1.8; 
 }
 
+/* ===MAIN=== */
+
+/* home page */
 aside {
     font-family: "Parkinsans", sans-serif;
     font-optical-sizing: auto;
@@ -118,7 +142,23 @@ button {
     text-decoration:none;
 }
 
-/* Images */
+/* div.card-wrapper {
+    display:flex;
+    gap:2rem;
+    width:80%;
+    justify-content:center;
+    padding:10rem;
+    margin:auto;
+    min-height:25rem;
+    outline:1px red dashed;
+    
+}
+article.card {
+    width:100%;
+    padding:2rem;
+    display:grid;
+} */
+/* ===IMAGES=== */
 img {
     display:block;
 }
@@ -127,7 +167,7 @@ img {
     border-radius:15px;
 }
 
-/* Footer */
+/* ===Footer=== */
 footer {
     background:var(--gradient);
     color:white;
