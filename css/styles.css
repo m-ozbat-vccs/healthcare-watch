@@ -36,13 +36,16 @@ Marisa Ozbat - 2026 */
     --gradient:linear-gradient(90deg,#0B5E4A, #0D5A62 50%, #0E577A 75%, #114FAA);
     --peacock-green:#0B5E4A;
     --ocean-blue:#114FAA;
-}
+    --fs-heading2:clamp(1.500rem, calc(1.318rem + 0.909vw), 2.000rem);
+    --fs-nav:clamp(1.000rem, calc(0.636rem + 1.818vw), 2.000rem);
+
 
 /* ===HEADINGS=== */
 h1 {
     font-family: "Georama", sans-serif; 
     font-size:3rem;
     text-align:center;
+    padding:5rem;
 }
 
 h2 {
@@ -50,7 +53,7 @@ h2 {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size:2rem;
+  font-size:var(--fs-heading2);
 }
 
 header {
@@ -65,7 +68,7 @@ header a {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    font-size:clamp(1.125rem, calc(0.950rem + 0.875vw), 2.000rem);
+    font-size:var(--fs-nav);
 }
 
 /* ===NAV=== */
@@ -100,21 +103,12 @@ body {
 
 /* home page */
 aside {
-    font-family: "Parkinsans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-size:1rem;
+    display:none;
 }
-ul.aside-list {
-    list-style-image:url(../images/arrow-marker.svg);
-    padding:0 25% 0 25%;
+img.cost-graphic {
+    display:none;
 }
 
-article.card {
-    border:2px solid var(--ocean-blue); 
-    border-radius:10px;
-}
 main a {
     color:black;
     text-decoration:none;
@@ -124,40 +118,109 @@ main a:hover {
     text-decoration:underline;
 }
 
+
+.blog1 {
+    min-width:50%;
+    padding-left:2rem;
+    padding-right:2rem;
+    outline:1px solid red;
+}
+
+.blog-img1 {
+    margin-left:5rem;
+} 
+
+.blog-img2 {
+    float:right;
+    padding:0.5rem;
+} 
+
+
+
+.blog2 {
+    max-width:70%;
+    margin:auto;
+}
+
+
 .button,
 button {
     background:var(--gradient);
     color:white;
     text-decoration:none;
-    padding:10px 45px 10px 45px;
-    border-radius: 30px;
+    padding:6% 20%;
+    border-radius: 10rem;
     font-family: "Parkinsans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    font-size:2rem;
+    font-size:var(--fs-heading2);
+    text-align:center;
+    display:block;
 }
 
 .button:hover {
     text-decoration:none;
 }
 
-/* div.card-wrapper {
+.subscribe-button {
+    margin:5rem auto; 
+    padding: 3% 10%; 
+}
+
+/* CARD-homepage FLEXBOX */
+div.card-wrapper {
     display:flex;
-    gap:2rem;
-    width:80%;
+    gap:3rem;
+    width:100%;
     justify-content:center;
-    padding:10rem;
-    margin:auto;
+    padding:8rem;
     min-height:25rem;
     outline:1px red dashed;
+    flex-direction:column;
+    align-items:center; 
     
 }
+
+/* OPENING BLOG AND ASIDE FLEXBOX */
+div.home-blog-aside {
+    display:flex;
+    flex-direction:column;
+}
+
+/* GRID WITHIN EACH CARD */
 article.card {
-    width:100%;
+    border:2px solid var(--ocean-blue); 
+    border-radius:10px;
+    width:clamp(18.750rem, calc(14.205rem + 22.727vw), 31.250rem);
+    height:25rem;
     padding:2rem;
+    align-content:center;
+    justify-content:center;
     display:grid;
-} */
+    grid-template-columns:1fr 2fr 1fr 1fr;
+    grid-template-rows:1fr 2fr 1fr;
+    outline:1px dashed red;
+    flex:1 1 auto;
+} 
+
+.button {
+    grid-column: 2 / 4;
+    grid-row:3 / 4; 
+}
+
+article.card p {
+    padding-top:2rem;
+    grid-column:span 4;
+}
+
+h2.news-h2 {
+    padding-top:5%;
+}
+
+img.newspaper-icon {
+    transform:translate(-10%, -10%);
+}
 /* ===IMAGES=== */
 img {
     display:block;
@@ -206,12 +269,65 @@ address {
 /*===================
     Desktop Styles
 =====================*/
-@media (min-width:768px) {
+@media (min-width:1219px) {
     .mobile-only {
         display:none;
+    }
+    aside {
+        display:block;
+        font-family: "Parkinsans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        font-size:1rem;
+        min-width:30rem;
+    }
+    ul.aside-list {
+        list-style-image:url(../images/arrow-marker.svg);
+        padding:0 25% 0 25%;
+    }
+    div.card-wrapper {
+        flex-direction:row;
+    }
+    img.cost-graphic {
+        display:block;
+    }
+    div.home-blog-aside {
+        flex-direction:row;
     }
 }
 
 /*===================
     Mobile Styles
 =====================*/
+@media screen and (max-width:1220px) {
+
+    .blog1 {
+        min-width:100%;
+    }
+
+    .blog-img1 {
+        margin:0 2rem 0 2rem;
+        width:85%;
+    }
+    .blog2 p {
+        clear:both;
+    } 
+    .blog2 {
+        max-width:100%;
+        margin:0 2rem 0 2rem;
+    }
+    .blog-img2 {
+        width:100%;
+    }
+    
+}
+
+/*====================================
+    Tablet-Breakpoints for transitions
+=====================================*/
+@media screen and (max-width:768px) {
+    article.card {
+        width:80vw;
+    }
+}

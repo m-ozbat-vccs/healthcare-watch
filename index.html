@@ -10,6 +10,7 @@
     <header>
         <!-- Top Navigation -->
         <nav>
+            <!-- GRID -->
             <ul class="nav-wrapper">
                         <li class="nav-logo"><a href="#"><img src="images/hw-logo.svg" alt="Healthcare Watch logo"></a></li>
                         <li class="nav-avatar"><a href="#"><img src="images/avatar-icon-mobile.svg" alt="Icon of an avatar" class="mobile-only"></a></li>
@@ -22,28 +23,31 @@
                         <li class="sign-up"><a href="#">Sign Up</a></li>
                         <li class="log-in"><a href="#">Log In</a></li>
                         <li><a href="#"><img src="images/hamburger-icon.svg" alt="Hamburger style menu icon" class="mobile-only"></a></li>
+            </ul>
+            <!-- END GRID -->
         </nav>
     </header>
     <main>
         <!-- Page Heading -->
         <h1>Healthcare Watch</h1>
-        <!-- This article is for the first blog post -->
-            <article>
+        <!-- This article is for the first blog post/FLEX BOX -->
+        <div class="home-blog-aside">
+            <picture>
+                <source media="(max-width:1219px)" srcset="images/blog-pic1-mobile.jpg">
+                <source media="(min-width:1220px)" srcset="images/blog-pic1-desktop.jpg">
+                <img src="images/blog-pic1-desktop.jpg" alt="Image of a woman holding sign stating everyone deserves healthcare" class="rounded-corners blog-img1">
+                <!-- needed to make one image the default to make it work properly -->
+            </picture>
+            <article class="blog1">
                 <h2>Blog Headline</h2>
-                    <picture>
-                        <source media="(max-width:576px)" srcset="images/blog-pic1-mobile.jpg">
-                        <source media="(min-width:577px)" srcset="images/blog-pic1-desktop.jpg">
-                        <img src="images/blog-pic1-desktop.jpg" alt="Image of a woman holding sign stating everyone deserves healthcare" class="rounded-corners">
-                        <!-- needed to make one image the default to make it work properly -->
-                    </picture>
-                <p class="blog1">
+                <p>
                 Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
                 Curabitur tempor quis eros tempus lacinia. Nam bibendum pellentesque quam a convallis. Sed ut vulputate nisi. Integer in felis sed leo vestibulum venenatis. Suspendisse quis arcu sem. Aenean feugiat ex eu vestibulum vestibulum. Morbi a eleifend magna. Nam metus lacus, porttitor eu mauris a, blandit ultrices nibh. Mauris sit amet magna non ligula vestibulum eleifend. Nulla varius volutpat turpis sed lacinia. Nam eget mi in purus lobortis eleifend. Sed nec ante dictum sem condimentum ullamcorper quis venenatis nisi. Proin vitae facilisis nisi, ac posuere leo.
                 Nam pulvinar blandit velit, id condimentum diam faucibus at. Aliquam lacus nisi, sollicitudin at nisi nec, fermentum congue felis. Quisque mauris dolor, fringilla sed tincidunt ac, finibus non odio. Sed vitae mauris nec ante pretium finibus. Donec nisl neque, pharetra ac elit eu, faucibus aliquam ligula. Nullam dictum, tellus tincidunt tempor laoreet, nibh elit sollicitudin felis, eget feugiat sapien diam nec nisl. Aenean gravida turpis nisi, consequat dictum risus dapibus a. Duis felis ante, varius in neque eu, tempor suscipit sem. Maecenas ullamcorper gravida sem sit amet cursus. Etiam pulvinar purus vitae justo pharetra consequat. Mauris id mi ut arcu feugiat maximus. Mauris consequat tellus id tempus aliquet.
                 Vestibulum dictum ultrices elit a luctus. Sed in ante ut leo congue posuere at sit amet ligula. Pellentesque eget augue nec nisl sodales blandit sed et sem. Aenean quis finibus arcu, in hendrerit purus. Praesent ac aliquet lorem. Morbi feugiat aliquam ligula, et vestibulum ligula hendrerit vitae. Sed ex lorem, pulvinar sed auctor sit amet, molestie a nibh. Ut euismod nisl arcu, sed placerat nulla volutpat aliquet. Ut id convallis nisl. Ut mauris leo, lacinia sed elit id, sagittis rhoncus odio. Pellentesque sapien libero, lobortis a placerat et, malesuada sit amet dui. Nam sem sapien, congue eu rutrum nec, pellentesque eget ligula.Ut euismod nisl arcu, sed placerat nulla volutpat aliquet.  
                 </p>
+                <button class="subscribe-button">Subscribe</button>
             </article>
-                <button>Subscribe</button>
         <!-- This aside is for the links on the right -->
             <aside>
                 <ul class="aside-list">
@@ -56,14 +60,16 @@
                     <li><a href="#">Types of Healthcare Systems</a></li>
                 </ul>
             </aside>
+        </div>
+        <!-- END FLEX BOX -->
         <!-- This article is for the second blog post -->
-            <article>
-                <h2>Blog Headline</h2>
+            <article class="blog2">
                     <picture>
-                        <source media="(max-width:576px)" srcset="images/blog-pic2-mobile.jpg">
-                        <source media="(min-width:577px)" srcset="images/blog-pic2-desktop.jpg">
-                        <img src="images/blog-pic2-desktop.jpg" alt="Image of a doctor listening to child's heart and lungs with a stethescope" class="rounded-corners">
+                        <source media="(max-width:768px)" srcset="images/blog-pic2-mobile.jpg">
+                        <source media="(min-width:769px)" srcset="images/blog-pic2-desktop.jpg">
+                        <img src="images/blog-pic2-desktop.jpg" alt="Image of a doctor listening to child's heart and lungs with a stethescope" class="rounded-corners blog-img2">
                     </picture>
+                    <h2>Blog Headline</h2>
                 <p>
                 Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
                 Curabitur tempor quis eros tempus lacinia. Nam bibendum pellentesque quam a convallis. Sed ut vulputate nisi. Integer in felis sed leo vestibulum venenatis. 
@@ -71,35 +77,35 @@
                 Vestibulum dictum ultrices elit a luctus. Sed in ante ut leo congue posuere at sit amet ligula. Pellentesque eget augue nec nisl sodales blandit sed et sem. Aenean quis finibus arcu, in hendrerit purus. Praesent ac aliquet lorem. Morbi feugiat aliquam ligula, et vestibulum ligula hendrerit vitae. Sed ex lorem, pulvinar sed auctor sit amet, molestie a nibh. Ut euismod nisl arcu, sed placerat nulla volutpat aliquet. Ut id convallis nisl. Ut mauris leo, lacinia sed elit id, sagittis rhoncus odio. Pellentesque sapien libero, lobortis a placerat et, malesuada sit amet dui. Nam sem sapien, congue eu rutrum nec, pellentesque eget ligula.Ut euismod nisl arcu, sed placerat nulla volutpat aliquet. 
                 </p>
             </article>
-        <!-- This div is for the three cards with CTA's -->
+        <!-- This div is for the three cards with CTA's in a FLEXBOX -->
             <div class="card-wrapper">
                 <!-- These articles are the individual cards -->
-                 <article class="card">
-                    <h2>Forum</h2>
-                        <img src="images/forum-icon.svg" alt="message bubble icon">
+                 <article class="card card-forum"><!-- grid for card one -->
+                        <img src="images/forum-icon.svg" alt="message bubble icon" class="forum-icon">
+                        <h2>Forum</h2>
                         <p>
                         Visit the message boards to start topics, comment, and interact with other users.
                         </p>
                     <a href="#" class="button">Forum</a>
                  </article>
-                 <article class="card">
-                    <h2>Analysis</h2>
-                        <img src="images/analysis-icon.svg" alt="magnifying glass icon">
+                 <article class="card card-analysis"><!-- grid for card two -->
+                        <img src="images/analysis-icon.svg" alt="magnifying glass icon" calss="analysis-icon">
+                        <h2>Analysis</h2>
                         <p>
                         Visit the Analysis page for studies, and an analysis of healthcare systems around the world.
                         </p>
                     <a href="#" class="button">Analysis</a>
                  </article>
-                 <article class="card">
-                    <h2>News</h2>
-                        <img src="images/news-icon.svg" alt="newspaper icon">
+                 <article class="card card-news"><!-- grid for card three -->
+                        <img src="images/news-icon.svg" alt="newspaper icon" class="newspaper-icon">
+                        <h2 class="news-h2">News</h2>
                         <p>
                         Visit our News page to keep up to date on current news stories, petitions, and polls related to healthcare. 
                         </p>
                     <a href="#" class="button">News</a>
                  </article>
                 </div>
-            <img src="images/cost-graphic.jpg" alt="Graphic detailing the cost of healthcare for Americans" class="rounded-corners">
+            <img src="images/cost-graphic.jpg" alt="Graphic detailing the cost of healthcare for Americans" class="rounded-corners cost-graphic">
             <a href=#><img src="images/back-to-top-icon.svg" alt="Arrow icon pointing up"></a>
     </main>
     <!-- Bottom Navigation/Footer -->
