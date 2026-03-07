@@ -121,6 +121,7 @@ main a:hover {
 
 .blog1 {
     min-width:50%;
+    max-width:30rem;
     padding-left:2rem;
     padding-right:2rem;
     outline:1px solid red;
@@ -230,6 +231,14 @@ img {
     border-radius:15px;
 }
 
+div.back-to-top {
+    display:flex;
+    justify-content:flex-end;
+    position:sticky;
+    bottom:20px;
+    right:20px;
+    z-index:999;
+}
 /* ===Footer=== */
 footer {
     background:var(--gradient);
@@ -280,17 +289,40 @@ address {
         font-weight: 600;
         font-style: normal;
         font-size:1rem;
-        min-width:30rem;
     }
     ul.aside-list {
-        list-style-image:url(../images/arrow-marker.svg);
-        padding:0 25% 0 25%;
+        list-style-type:none;
+        padding:0 0 0 10%;
     }
+    ul.aside-list li {
+        border:2px solid var(--ocean-blue); 
+        margin-bottom:2rem; 
+        padding:8%;
+        border-radius:1.25rem;
+        width:20vw;
+        position:relative;    
+    }
+    ul.aside-list li::before {
+        content:"";
+        background-image:url(../images/arrow-marker.svg);
+        background-size:cover;
+        background-repeat:no-repeat;
+        position:absolute;
+        left:2rem;
+        top:50%;
+        transform:translateY(-50%);
+        height:2rem;
+        width:2rem;
+    }
+    ul.aside-list a {
+        margin-left:3rem;
+    } 
     div.card-wrapper {
         flex-direction:row;
     }
     img.cost-graphic {
         display:block;
+        margin:3rem auto;
     }
     div.home-blog-aside {
         flex-direction:row;
