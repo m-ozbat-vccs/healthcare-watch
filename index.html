@@ -13,15 +13,15 @@
             <!-- GRID -->
             <ul class="nav-wrapper">
                         <li class="nav-logo"><a href="#"><img src="images/hw-logo.svg" alt="Healthcare Watch logo"></a></li>
-                        <li class="nav-avatar"><a href="#"><img src="images/avatar-icon-mobile.svg" alt="Icon of an avatar" class="mobile-only"></a></li>
-                        <li class="nav-about"><a href="#">About</a></li>
-                        <li class="nav-contact"><a href="#">Contact</a></li>
-                        <li class="nav-forum"><a href="#">Forum</a></li>
-                        <li class="nav-analysis"><a href="#">Analysis</a></li>
-                        <li class="nav-news"><a href="#">News</a></li>
+                        <li class="nav-avatar"><a href="#" class="hover-glow"><img src="images/avatar-icon-mobile.svg" alt="Icon of an avatar" class="mobile-only"></a></li>
+                        <li class="nav-about"><a href="#" class="hover-glow">About</a></li>
+                        <li class="nav-contact"><a href="#" class="hover-glow">Contact</a></li>
+                        <li class="nav-forum"><a href="#" class="hover-glow">Forum</a></li>
+                        <li class="nav-analysis"><a href="#" class="hover-glow">Analysis</a></li>
+                        <li class="nav-news"><a href="#" class="hover-glow">News</a></li>
                         <li class="search-bar"><input type="search" name="search" id="search"> 
-                        <li class="sign-up"><a href="#">Sign Up</a></li>
-                        <li class="log-in"><a href="#">Log In</a></li>
+                        <li class="sign-up"><a href="#" class="hover-glow">Sign Up</a></li>
+                        <li class="log-in"><a href="#" class="hover-glow">Log In</a></li>
                         <li><a href="#"><img src="images/hamburger-icon.svg" alt="Hamburger style menu icon" class="mobile-only"></a></li>
             </ul>
             <!-- END GRID -->
@@ -33,8 +33,8 @@
         <!-- This article is for the first blog post/FLEX BOX -->
         <div class="home-blog-aside">
             <picture>
-                <source media="(max-width:1219px)" srcset="images/blog-pic1-mobile.jpg">
-                <source media="(min-width:1220px)" srcset="images/blog-pic1-desktop.jpg">
+                <source media="(max-width:1219px)" srcset="images/blog-pic1-mobile.avif">
+                <source media="(min-width:1220px)" srcset="images/blog-pic1-desktop.avif">
                 <img src="images/blog-pic1-desktop.jpg" alt="Image of a woman holding sign stating everyone deserves healthcare" class="rounded-corners blog-img1">
                 <!-- needed to make one image the default to make it work properly -->
             </picture>
@@ -65,8 +65,8 @@
         <!-- This article is for the second blog post -->
             <article class="blog2">
                     <picture>
-                        <source media="(max-width:768px)" srcset="images/blog-pic2-mobile.jpg">
-                        <source media="(min-width:769px)" srcset="images/blog-pic2-desktop.jpg">
+                        <source media="(max-width:768px)" srcset="images/blog-pic2-mobile.avif">
+                        <source media="(min-width:769px)" srcset="images/blog-pic2-desktop.avif">
                         <img src="images/blog-pic2-desktop.jpg" alt="Image of a doctor listening to child's heart and lungs with a stethescope" class="rounded-corners blog-img2">
                     </picture>
                     <h2>Blog Headline</h2>
@@ -89,7 +89,7 @@
                     <a href="#" class="button">Forum</a>
                  </article>
                  <article class="card card-analysis"><!-- grid for card two -->
-                        <img src="images/analysis-icon.svg" alt="magnifying glass icon" calss="analysis-icon">
+                        <img src="images/analysis-icon.svg" alt="magnifying glass icon" class="analysis-icon">
                         <h2>Analysis</h2>
                         <p>
                         Visit the Analysis page for studies, and an analysis of healthcare systems around the world.
@@ -105,40 +105,58 @@
                     <a href="#" class="button">News</a>
                  </article>
                 </div>
-            <img src="images/cost-graphic.jpg" alt="Graphic detailing the cost of healthcare for Americans" class="rounded-corners cost-graphic">
+            <img src="images/cost-graphic.avif" alt="Graphic detailing the cost of healthcare for Americans" class="rounded-corners cost-graphic">
             <div class="back-to-top">
                 <a href=#><img src="images/back-to-top-icon.svg" alt="Arrow icon pointing up"></a>
             </div>
     </main>
     <!-- Bottom Navigation/Footer -->
     <footer>
-        <ul>
-            <li><a href="#"><img src="images/hw-logo.svg" alt="Healthcare Watch logo"></a></li>
-            <li><a href="#" class="footer-semi-bold">About</a></li>
-            <li><a href="#" class="footer-semi-bold">Contact</a></li>
-            <li><a href="#" class="footer-semi-bold">Forum</a></li>
-            <li><a href="#" class="footer-semi-bold">Analysis</a></li>
-            <li><a href="#" class="footer-semi-bold">News</a></li>
-            <li><a href="#" class="footer-regular">Studies</a></li>
-            <li><a href="#" class="footer-regular">International Systems</a></li>
-            <li><a href="#" class="footer-regular">Testimonials</a></li>
-            <li><a href="#" class="footer-regular">Types of Systems</a></li>
-            <li><a href="#" class="footer-regular">Current Events</a></li>
-            <li><a href="#" class="footer-regular">Petitions</a></li>
-            <li><a href="#" class="footer-regular">Polls</a></li>
-        </ul>
+        <div class="footer-links">
+            <div class="footer-logo">
+                <a href="#"><img src="images/hw-logo.svg" alt="Healthcare Watch logo"></a>
+            </div>
+            <ul class="footer-links-col1">
+                <li><a href="#" class="footer-semi-bold">About</a></li>
+                <li><a href="#" class="footer-semi-bold">Contact</a></li>
+                <li><a href="#" class="footer-semi-bold">Forum</a></li>
+                <li><a href="#" class="footer-semi-bold">Analysis</a></li>
+                <li><a href="#" class="footer-semi-bold">News</a></li>
+            </ul>
+            <ul class="footer-links-col2">
+                <li><a href="#" class="footer-regular">Studies</a></li>
+                <li><a href="#" class="footer-regular">International Systems</a></li>
+                <li><a href="#" class="footer-regular">Testimonials</a></li>
+                <li><a href="#" class="footer-regular">Types of Systems</a></li>
+            </ul>
+            <ul class="footer-links-col3">
+                <li><a href="#" class="footer-regular">Current Events</a></li>
+                <li><a href="#" class="footer-regular">Petitions</a></li>
+                <li><a href="#" class="footer-regular">Polls</a></li>
+            </ul>
+        </div>
         <address>
             7890 Havesham Blvd<br>
             Forest Hills, VA 23466<br>
             804-767-9000<br>
             info@healthcare-watch.org
         </address>
-        <div>
-            <a href="#"><img src="images/insta-logo.svg" alt="Instagram icon"></a>
-            <a href="#"><img src="images/facebook-logo.svg" alt="Facebook icon"></a>
-            <a href="#"><img src="images/twitter-x-logo.svg" alt="Twitter also known as X icon"></a>
-            <a href="#"><img src="images/substack-logo.svg" alt="Substack icon"></a>
-            <a href="#"><img src="images/blue-sky-logo.svg" alt="Blue Sky icon"></a>
+        <div class="footer-flex">
+            <div class="instagram">
+                <a href="#"><img src="images/insta-logo.svg" alt="Instagram icon"></a>
+            </div>
+            <div class="facebook">
+                <a href="#"><img src="images/facebook-logo.svg" alt="Facebook icon"></a>
+            </div>
+            <div class="twitter">
+                <a href="#"><img src="images/twitter-x-logo.svg" alt="Twitter also known as X icon"></a>
+            </div>
+            <div class="substack">
+                <a href="#"><img src="images/substack-logo.svg" alt="Substack icon"></a>
+            </div>
+            <div class="bluesky">
+                <a href="#"><img src="images/blue-sky-logo.svg" alt="Blue Sky icon"></a>
+            </div>
         </div>
     </footer>   
 </body>
