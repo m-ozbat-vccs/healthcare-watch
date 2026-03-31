@@ -36,6 +36,7 @@ Marisa Ozbat - 2026 */
     --gradient:linear-gradient(90deg,#0B5E4A, #0D5A62 50%, #0E577A 75%, #114FAA);
     --peacock-green:#0B5E4A;
     --ocean-blue:#114FAA;
+    --visited-lnk:#4b4a4a;
     --fs-heading2:clamp(1.500rem, calc(1.318rem + 0.909vw), 2.000rem);
     --fs-nav:clamp(1.000rem, calc(0.636rem + 1.818vw), 2.000rem);
 }
@@ -95,13 +96,17 @@ li.search-bar {
 } 
 
 a.hover-glow {
-    transition: text-shadow 1s ease;
+    transition: text-shadow 1s ease, scale .1s ease-in;
 }
 a.hover-glow:hover {
     text-shadow:hsla(0, 0%, 100%, 0.5) 0 0 5px,
                 hsla(0, 0%, 100%, 0.5) 0 0 10px,
                 hsla(0, 0%, 100%, 0.5) 0 0 20px;
 } 
+
+a.hover-glow:active {
+    transform:scale(2);
+}
 
 /* Search */
 .search-btn {
@@ -168,6 +173,7 @@ main a:hover {
     text-decoration:underline;
 }
 
+
 /* OPENING BLOG AND ASIDE FLEXBOX */
 div.home-blog-aside {
     display:flex;
@@ -198,6 +204,18 @@ div.home-blog-aside {
     transform:translateY(-40%);
 }
 
+aside a:visited {
+    color:var(--visited-lnk);
+} 
+
+aside a {
+    transition:font-size 0.1s ease;
+}
+
+aside a:active {
+    font-size:1.2rem;
+}
+
 .button,
 button {
     background:var(--gradient);
@@ -212,7 +230,7 @@ button {
     font-size:var(--fs-heading2);
     text-align:center;
     display:block;
-    transition: text-shadow 1s ease;
+    transition: text-shadow 1s ease, font-size 0.1s ease;
 }
 
 .button:hover,
@@ -222,16 +240,35 @@ button:hover {
                 hsla(0, 0%, 100%, 0.5) 0 0 10px,
                 hsla(0, 0%, 100%, 0.5) 0 0 20px;
 }
+.button:active {
+    font-size:2.2rem;
+}
+
+.nav-wrapper li {
+    transition:transform .2s ease;
+}
+
+.nav-wrapper li:active {
+    transform:scale(1.2);
+}
+
 
 .subscribe-button {
     margin:5rem auto; 
     padding: 3% 10%; 
     transform:translateY(80%);
     border:none;
+    transition:font-size 0.1s ease;
 }
+
+.subscribe-button:active {
+    font-size:2.2rem;
+}
+
 a.read-more {
     position:relative;
     padding-left:2rem;
+    transition:font-size 0.1s ease-in;
 }
 a.read-more::before {
     content:"";
@@ -245,6 +282,14 @@ a.read-more::before {
     top:50%;
     left:-0.5rem;
 }
+a.read-more:visited {
+    color:var(--visited-lnk);
+}
+
+a.read-more:active {
+    font-size:1.25rem;
+}
+
 
 /* CARD-homepage FLEXBOX */
 div.card-wrapper {
@@ -308,6 +353,13 @@ div.back-to-top { /* back to top Flexbox */
     margin-right:0.5rem;
     z-index:999;
 }
+#arrow-icon {
+    transition:transform 0.1s ease;
+}
+
+#arrow-icon:active {
+    transform:scale(1.2);
+}
 
 /* ===Footer=== */
 footer {
@@ -339,6 +391,21 @@ footer a:hover {
     text-decoration:underline;
 }
 
+footer a {
+    transition:font-size 0.1 ease;
+}
+
+footer a:active {
+    font-size:1rem;
+}
+
+.footer-links-col1 a {
+    transition:font-size 0.1s ease;
+}
+
+.footer-links-col1 a:active {
+    font-size:1.2rem;
+}
 address {
     display:none;
 }
@@ -353,6 +420,11 @@ div.footer-logo {
     align-self:center;
     justify-self:center;
     list-style:none;
+    transition:transform 0.1s ease;
+}
+
+div.footer-logo:active {
+    transform:scale(1.2);
 }
 
 ul.footer-links-col1,
