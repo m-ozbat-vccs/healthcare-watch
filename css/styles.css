@@ -81,7 +81,7 @@ nav ul {
 
 ul.nav-wrapper {  /* Nav grid */
     display:grid;
-    grid-template-columns:repeat(5, auto) 3fr repeat(3, auto);
+    grid-template-columns:repeat(5, auto) 1fr repeat(3, auto);
     min-height:8rem;
     padding:2rem 1rem 0 1rem;
     gap:1.75rem;
@@ -96,19 +96,25 @@ li.search-bar {
 } 
 
 a.hover-glow {
-    transition: text-shadow 1s ease, scale .1s ease-in;
+    transition: text-shadow 1s ease;
 }
+
 a.hover-glow:hover {
     text-shadow:hsla(0, 0%, 100%, 0.5) 0 0 5px,
                 hsla(0, 0%, 100%, 0.5) 0 0 10px,
                 hsla(0, 0%, 100%, 0.5) 0 0 20px;
 } 
-
-a.hover-glow:active {
-    transform:scale(2);
+/* Mobile Menu Styles */
+.bar {
+    display:block;
+    width:2rem;
+    height:.2rem;
+    margin:5px 0;
+    transition: all 0.3s ease;
+    background-color:white; 
 }
 
-/* Search */
+/* ===Search=== */
 .search-btn {
     background:none;
     border:none;
@@ -140,6 +146,7 @@ a.hover-glow:active {
 }
 .search-input:focus {
     border:2px solid hsla(0, 0%, 100%, 0.3);
+    background-color:hsla(0, 0%, 100%, 0.15);
 }
 /* ===BODY=== */
 body {
@@ -174,7 +181,7 @@ main a:hover {
 }
 
 
-/* OPENING BLOG AND ASIDE FLEXBOX */
+/* ===OPENING BLOG AND ASIDE FLEXBOX=== */
 div.home-blog-aside {
     display:flex;
     flex-direction:row;
@@ -213,7 +220,7 @@ aside a {
 }
 
 aside a:active {
-    font-size:1.2rem;
+    font-size:1.1rem;
 }
 
 .button,
@@ -230,7 +237,7 @@ button {
     font-size:var(--fs-heading2);
     text-align:center;
     display:block;
-    transition: text-shadow 1s ease, font-size 0.1s ease;
+    transition: text-shadow 1s ease, transform 0.1s ease;
 }
 
 .button:hover,
@@ -241,7 +248,7 @@ button:hover {
                 hsla(0, 0%, 100%, 0.5) 0 0 20px;
 }
 .button:active {
-    font-size:2.2rem;
+    transform:scale(1.05);
 }
 
 .nav-wrapper li {
@@ -249,7 +256,7 @@ button:hover {
 }
 
 .nav-wrapper li:active {
-    transform:scale(1.2);
+    transform:scale(1.05);
 }
 
 
@@ -291,7 +298,7 @@ a.read-more:active {
 }
 
 
-/* CARD-homepage FLEXBOX */
+/* ===CARD-homepage FLEXBOX=== */
 div.card-wrapper {
     display:flex;
     gap:3rem;
@@ -304,7 +311,7 @@ div.card-wrapper {
     
 }
 
-/* GRID WITHIN EACH CARD */
+/* ===GRID WITHIN EACH CARD=== */
 article.card {
     border:2px solid var(--ocean-blue); 
     border-radius:10px;
@@ -336,6 +343,7 @@ h2.news-h2 {
 img.newspaper-icon {
     transform:translate(-10%, -10%);
 }
+
 /* ===IMAGES=== */
 img {
     display:block;
@@ -358,7 +366,7 @@ div.back-to-top { /* back to top Flexbox */
 }
 
 #arrow-icon:active {
-    transform:scale(1.2);
+    transform:scale(1.05);
 }
 
 /* ===Footer=== */
@@ -424,7 +432,15 @@ div.footer-logo {
 }
 
 div.footer-logo:active {
-    transform:scale(1.2);
+    transform:scale(1.05);
+}
+
+ .footer-icon {
+        transition:transform 0.1s ease;
+}
+
+.footer-icon:active {
+        transform:scale(1.05);
 }
 
 ul.footer-links-col1,
@@ -451,8 +467,9 @@ div.substack {
 /*===================
     Desktop Styles
 =====================*/
-@media (min-width:1219px) {
-    .mobile {
+@media (min-width:1440px) {
+ 
+    .mobile-nav-item {
         display:none;
     }
     aside {
@@ -504,12 +521,15 @@ div.substack {
         font-size:0.875rem;
         text-align:right;
     }
+    #hamburger {
+        display:none;
+    }
 }
 
 /*===================
     Mobile Styles
 =====================*/
-@media screen and (max-width:1220px) {
+@media screen and (max-width:1439px) {
 
     .blog1 {
         min-width:100%;
@@ -566,18 +586,12 @@ div.substack {
         display:none;
     }
     nav ul.nav-wrapper {
-        position:relative;
+        position:fixed;
+        text-align:right;
+        left:-100%;
+        top: 5rem;
+        background-color:var(--gradient);
         z-index:999;
-        display:none;
-    }
-    #checkbox {
-    display: none;
-    }
-    #checkbox:checked~ul  {
-        display: inline-block;
-        text-align:left;
-        background:transparent;
-        color:white;
     }
     nav {
         display:grid;
@@ -587,11 +601,6 @@ div.substack {
         position:fixed;
         background:var(--gradient); 
         z-index:999;
-    }
-    #hamburger {
-        place-self:center center;
-        font-size:3rem;
-        cursor:pointer;
     }
     #search-mobile {
         place-self:center end;
@@ -609,6 +618,32 @@ div.substack {
     .search-btn {
         right:-10px;
     }
+    .mobile-nav-item {
+        transition:transform 0.1s ease;
+    }
+    .mobile-nav-item:active {
+        transform:scale(1.05);
+    }
+    #hamburger {
+        display:block;
+        place-self:center center;
+        transform:translateX(10px);
+        cursor:pointer;
+    }
+    .hamburger.active #bar2 {
+        opacity:0;
+    }
+    .hamburger.active #bar1 {
+        transform:translateY(8px) rotate(45deg); 
+    }
+    .hamburger.active #bar3 {
+        transform:translateY(-8px) rotate(-45deg);
+    } 
+    .nav-wrapper.active {
+        left:0;
+        display:block;
+    }
+    
 }
 
 /*====================================
