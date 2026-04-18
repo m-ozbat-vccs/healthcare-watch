@@ -11,3 +11,10 @@ document.querySelectorAll(".nav-item").forEach(n => n.addEventListener("click", 
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }))
+
+//Function to add and remove active class to tabs to switch Log In/Sign Up form
+function switchTab(evt, tabId) {
+    document.querySelectorAll('.form-content, .tab').forEach(el => el.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    evt.currentTarget.classList.add('active');
+}
