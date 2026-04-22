@@ -53,12 +53,17 @@
     <main>
         <h1>Healthcare Watch</h1>
         <div class="form-container">
+            <!-- Put tabs in buttons at the top in a separate div, add the form attribute to bind each button to its 
+             corresponding form -->
             <div class="form-tabs">
-                <button type="button" class="login tab-btn active" form="log-in-form" onclick="switchTab(event, 'login')">Login</button>
+                <button type="button" class="login tab-btn active" form="log-in-form" onclick="switchTab(event, 'login')">Login</button> 
+                <!-- <button type="button" class="login tab-btn active" form="log-in-form">Login</button>  -->
                 <button type="button" class="signup tab-btn" form="sign-up-form" onclick="switchTab(event, 'sign-up')">Sign Up</button>
+                <!-- <button type="button" class="signup tab-btn" form="sign-up-form">Sign Up</button> -->
             </div>
+            <!-- Div for the Log In Form -->
             <div id="login" class="form-content active">
-                <form method="post" action="#" id="log-in-form">
+                <form method="post" action="#" id="log-in-form" autocomplete>
                     <div>
                         <label for="login-email">Email:</label>
                             <input type="email" id="login-email" name="login-email">
@@ -70,8 +75,9 @@
                     <button type="submit" class="submit-btn">Log in</button>
                 </form>
             </div>
+            <!-- Div for the Sign Up Form -->
             <div id="sign-up" class="form-content">
-                <form method="post" action="#" id="sign-up-form">
+                <form method="post" action="#" id="sign-up-form" autocomplete>
                     <div>
                         <label for="sign-up-email">Email:</label>
                             <input type="email" id="sign-up-email" name="sign-up-email">

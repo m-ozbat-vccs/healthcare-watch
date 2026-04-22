@@ -12,9 +12,22 @@ document.querySelectorAll(".nav-item").forEach(n => n.addEventListener("click", 
     navMenu.classList.remove("active");
 }))
 
+//Select the sign up and log in tab switching buttons and store them in variables
+// const logInBtn = document.querySelector(".login");
+// const signUpBtn = document.querySelector(".signup");
+
 //Function to add and remove active class to tabs to switch Log In/Sign Up form
 function switchTab(evt, tabId) {
     document.querySelectorAll('.form-content, .tab').forEach(el => el.classList.remove('active'));
     document.getElementById(tabId).classList.add('active');
     evt.currentTarget.classList.add('active');
 }
+
+// //Call the function, passing parameters for login on click
+// logInBtn.addEventListener("click", function() {
+//     switchTab(event, "login");
+// });
+// // //Call the function, passing parameters for signup on click
+// signUpBtn.addEventListener("click", function() {
+//     switchTab(event, "signup");
+// });

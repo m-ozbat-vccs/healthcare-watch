@@ -376,6 +376,7 @@ div.back-to-top { /* back to top Flexbox */
     transform:scale(1.05);
 }
 
+
 /* ===LOG IN/SIGN UP FORM=== */
 div.form-tabs {
     display:flex;
@@ -481,6 +482,28 @@ button.submit-btn:active {
     transform:scale(1.05);
 }
 
+/* ===About Us=== */
+div.about-wrapper {
+    display:flex;
+    flex-flow:column nowrap;
+    width:100%;
+}
+
+img.about-img {
+    width:90%;
+    margin:auto;
+}
+
+h2.h2-center {
+    text-align:center;
+    padding:2rem 0;
+}
+
+div.about-text {
+    padding:3rem;
+    margin:0 auto 2rem auto;
+    flex:auto;
+}
 /* ===Footer=== */
 footer {
     background:var(--gradient);
@@ -635,6 +658,25 @@ div.substack {
     }
     #hamburger {
         display:none;
+    }
+    div.about-wrapper {
+        flex-direction:row;
+        align-items:center;
+        margin-bottom:3%;
+    }
+    div.about-wrapper p {
+        width:70%;
+        margin:auto;
+    }
+    img.about-img {
+        width:120%;
+        margin:auto 5rem;
+    }
+    div.about-text {
+        justify-self:flex-end;
+        margin-left:3rem;
+        margin-top:0;
+        padding:5%;
     }
 }
 
