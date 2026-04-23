@@ -504,6 +504,44 @@ div.about-text {
     margin:0 auto 2rem auto;
     flex:auto;
 }
+
+/* ===Contact Page=== */
+#contact-form {
+    width:50%;
+    display:block;
+    margin:auto;
+    border:2px solid var(--ocean-blue);
+    padding:2rem;
+    border-radius:1rem;
+    margin-bottom:5rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width:100%;
+    padding:1rem;
+    border:2px solid var(--ocean-blue);
+    border-radius:0.5rem;
+}
+
+div.contact-info {
+    font-weight:600;
+    width:35%;
+    border:2px solid var(--ocean-blue);
+    margin:0 auto 8rem auto;
+    text-align:center;
+    border-radius:1rem;
+    padding:2rem;
+}
+
+div.contact-info hr {
+    width:70%;
+    height:1px;
+    margin:1rem auto;
+    border:0;
+    border-top:1px solid var(--ocean-blue);
+}
+
 /* ===Footer=== */
 footer {
     background:var(--gradient);
@@ -802,6 +840,12 @@ div.substack {
     }
     button.submit-btn {
         padding:4% 20%;
+    }
+    #contact-form {
+        width:80%;
+    }
+    div.contact-info {
+        width:60%;
     }
 }
 
