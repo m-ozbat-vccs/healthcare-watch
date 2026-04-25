@@ -283,6 +283,7 @@ a.read-more {
     position:relative;
     padding-left:2rem;
     transition:font-size 0.1s ease-in;
+    font-weight:600;
 }
 a.read-more::before {
     content:"";
