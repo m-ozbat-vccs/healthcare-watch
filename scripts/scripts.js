@@ -12,16 +12,6 @@ document.querySelectorAll(".nav-item").forEach(n => n.addEventListener("click", 
     navMenu.classList.remove("active");
 }))
 
-//Select the sign up and log in tab switching buttons and store them in variables
-// const logInBtn = document.querySelector(".login");
-// const signUpBtn = document.querySelector(".signup");
-
-//Function to add and remove active class to tabs to switch Log In/Sign Up form
-// function switchTab(evt, tabId) {
-//     document.querySelectorAll('.form-content, .tab').forEach(el => el.classList.remove('active'));
-//     document.getElementById(tabId).classList.add('active');
-//     evt.currentTarget.classList.add('active');
-// }
 
 //Function for switching between login and signup forms 
 function switchTab(evt, tabId) {
@@ -36,3 +26,18 @@ function switchTab(evt, tabId) {
 //Event listeners on click for each tab when clicked
 document.getElementById('signupBtn').addEventListener('click', (e) => switchTab(e, 'sign-up'));
 document.getElementById('loginBtn').addEventListener('click', (e) => switchTab(e, 'login'));
+
+//Trying to create the read more function 
+function toggleText(btn) {
+  const container = btn.parentElement;
+  const moreText = container.querySelector(".more");
+  const dots = container.querySelector(".dots");
+
+  if (moreText.style.display === "none") {
+    moreText.style.display = "block";
+    btn.innerHTML = "Read Less";
+  } else {
+    moreText.style.display = "none";
+    btn.innerHTML = "Read More";
+  }
+}

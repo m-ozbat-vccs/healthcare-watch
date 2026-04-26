@@ -13,7 +13,7 @@
         <nav>
             <a href="index.html" class="mobile-nav-item" id="mobile-logo"><img src="images/hw-logo.svg" alt="Healthcare Watch logo"></a>
             <a href="login-signup.html" class="hover-glow mobile-nav-item" id="avatar"><img src="images/avatar-icon-mobile.svg" alt="Icon of an avatar" class="mobile"></a>
-            <form role="search" class="search-form mobile-nav-item">
+            <form role="search" class="search-form mobile-nav-item" action="#">
                 <input type="search" name="search" id="search-mobile" class="search-input mobile">
                 <button type="submit" class="mobile search-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-search" viewBox="0 0 18 18">
@@ -72,9 +72,26 @@
                  ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu 
                  tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet 
                  lacinia. Aliquam in elementum tellus.
+                    <span class="more">Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                 dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus 
+                 sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum 
+                 velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per 
+                 conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, 
+                 ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu 
+                 tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet 
+                 lacinia. Aliquam in elementum tellus. >Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                 dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus 
+                 sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum 
+                 velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per 
+                 conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, 
+                 ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu 
+                 tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet 
+                 lacinia. Aliquam in elementum tellus. </span>
                 </p>
-                <a href="#" class="read-more">Read More...</a>
-                <button class="subscribe-button">Subscribe</button>
+                <button onclick="toggleText(this)" class="read-more myBtn">Read more...</button>
+                <div class="subscribe-btn-div">
+                    <button class="subscribe-button">Subscribe</button>
+                </div>
             </article>
         <!-- This aside is for the links on the right -->
             <aside>
@@ -98,17 +115,35 @@
                         <img src="images/blog-pic2-desktop.jpg" alt="Image of a doctor listening to child's heart and lungs with a stethescope" class="rounded-corners blog-img2">
                     </picture>
                     <h2>Blog Headline</h2>
-                <p>
-                Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
-                 dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus 
-                 sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum 
-                 velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per 
-                 conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, 
-                 ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu 
-                 tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet 
-                 lacinia. Aliquam in elementum tellus.
-                </p>
-                <a href="#" class="read-more">Read More...</a>
+                <div class="content-container">
+                    <p>
+                    Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                    dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus 
+                    sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum 
+                    velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per 
+                    conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, 
+                    ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu 
+                    tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet 
+                    lacinia. Aliquam in elementum tellus.
+                        <span class="more">Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                    dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus 
+                    sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum 
+                    velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per 
+                    conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, 
+                    ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu 
+                    tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet 
+                    lacinia. Aliquam in elementum tellus. >Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                    dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus 
+                    sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum 
+                    velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per 
+                    conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, 
+                    ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu 
+                    tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet 
+                    lacinia. Aliquam in elementum tellus. </span>
+                    </p>
+                    <!-- <button onclick="toggleText()" id="myBtn" class="read-more">Read more...</button> -->
+                </div>
+                    <button onclick="toggleText(this)" class="read-more myBtn read-more2">Read More...</button>
             </article>
         <!-- This div is for the three cards with CTA's in a FLEXBOX -->
             <div class="card-wrapper">

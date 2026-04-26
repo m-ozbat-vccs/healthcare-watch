@@ -114,9 +114,10 @@ a.hover-glow:hover {
 /* Mobile Menu Styles */
 .bar {
     display:block;
-    width:2rem;
-    height:.2rem;
-    margin:5px 0;
+    width:3rem;
+    height:0.25rem;
+    margin:8px 0;
+    border-radius:3px;
     transition: all 0.3s ease;
     background-color:var(--white); 
 }
@@ -216,6 +217,7 @@ div.home-blog-aside {
     padding-left:2rem;
     padding-right:2rem;
     transform:translateY(-40%);
+    margin-top:10rem;
 }
 
 aside a:visited {
@@ -255,19 +257,19 @@ button:hover {
                 var(--transparent-clr-50) 0 0 20px;
 }
 .button:active {
-    transform:scale(1.05);
+    transform:scale(1.0125);
 }
 
 .nav-wrapper li {
-    transition:transform .2s ease;
+    transition:transform .3s ease;
 }
 
 .nav-wrapper li:active {
-    transform:scale(1.05);
+    transform:scale(1.0125);
 }
 
 
-.subscribe-button {
+button.subscribe-button {
     margin:5rem auto; 
     padding: 3% 10%; 
     transform:translateY(80%);
@@ -279,13 +281,39 @@ button:hover {
     font-size:2.2rem;
 }
 
-a.read-more {
+.subscribe-button-div {
+    display:flex;
+}
+div.subscribe-button {
+    margin:10rem;
+}
+
+button.read-more:visited {
+    color:var(--visited-lnk);
+}
+
+button.read-more:active {
+    font-size:1.125rem;
+}
+span.more {
+    display:none;
+}
+
+button.read-more {
+    background:none;
+    border:none;
+    outline:none;
+    color:var(--black);
+    text-decoration:none;
     position:relative;
     padding-left:2rem;
-    transition:font-size 0.1s ease-in;
+    transition: 0.3s ease-in;
     font-weight:600;
-}
-a.read-more::before {
+    font-size:1rem;
+    cursor:pointer;
+}   
+
+button.read-more::before {
     content:"";
     background-image:url(../images/arrow-marker.svg);
     background-size:cover;
@@ -297,15 +325,10 @@ a.read-more::before {
     top:50%;
     left:-0.5rem;
 }
-a.read-more:visited {
-    color:var(--visited-lnk);
+
+buttom.read-more:hover {
+  text-decoration:underline;
 }
-
-a.read-more:active {
-    font-size:1.25rem;
-}
-
-
 /* ===CARD-homepage FLEXBOX=== */
 div.card-wrapper {
     display:flex;
@@ -332,6 +355,7 @@ article.card {
     grid-template-columns:1fr 2fr 1fr 1fr;
     grid-template-rows:1fr 2fr 1fr;
     flex:1 1 auto;
+    margin-top:5rem;
 } 
 
 .button {
@@ -408,7 +432,7 @@ button.signup {
 
 button.login:active,
 button.signup:active {
-    font-size:1.85rem;
+    font-size:1.80rem;
 }
 
 button.signup {
@@ -432,6 +456,11 @@ button.signup {
     padding:1rem;
     border-radius:0.5rem;
     border:none;
+    transition:transform 0.5s ease;
+}
+
+#log-in-form input:active {
+    transform:scale(1.0125);
 }
 
 #log-in-form input:focus {
@@ -453,7 +482,13 @@ button.signup {
     padding:1rem;
     border:2px solid var(--ocean-blue);
     border-radius:0.5rem;
+    transition:transform 0.5s ease;
 }
+
+#sign-up-form input:active {
+    transform:scale(1.0125);
+}
+
 
 #sign-up-form input:focus {
     background-color:var(--input-focus-clr);
@@ -480,7 +515,7 @@ button.submit-btn {
 }
 
 button.submit-btn:active {
-    transform:scale(1.05);
+    transform:scale(1.0125);
 }
 
 /* ===About Us=== */
@@ -523,6 +558,17 @@ div.about-text {
     padding:1rem;
     border:2px solid var(--ocean-blue);
     border-radius:0.5rem;
+    transition:transform 0.5s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    background-color:var(--input-focus-clr);
+}
+
+#contact-form input:active,
+#contact-form textarea:active {
+    transform:scale(1.0125);
 }
 
 div.contact-info {
@@ -827,10 +873,10 @@ div.substack {
         opacity:0;
     }
     .hamburger.active #bar1 {
-        transform:translateY(8px) rotate(45deg); 
+        transform:translateY(12px) rotate(30deg); 
     }
     .hamburger.active #bar3 {
-        transform:translateY(-8px) rotate(-45deg);
+        transform:translateY(-12px) rotate(-30deg);
     } 
     .nav-wrapper.active {
         left:0;
