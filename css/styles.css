@@ -326,7 +326,7 @@ button.read-more::before {
     left:-0.5rem;
 }
 
-buttom.read-more:hover {
+button.read-more:hover {
   text-decoration:underline;
 }
 /* ===CARD-homepage FLEXBOX=== */
@@ -427,12 +427,19 @@ button.signup {
     width:100%;
     cursor:pointer;
     font-size:1.75;
-    transition:font-size 0.1s ease;
+    transition:font-size 0.1s ease, text-shadow 1s ease;
 }
 
 button.login:active,
 button.signup:active {
     font-size:1.80rem;
+}
+
+button.login:hover,
+button.signup:hover {
+    text-shadow:var(--transparent-clr-50) 0 0 5px,
+                var(--transparent-clr-50) 0 0 10px,
+                var(--transparent-clr-50) 0 0 20px;
 }
 
 button.signup {
@@ -511,7 +518,13 @@ button.submit-btn {
     border:1px solid var(--white);
     outline:none;
     margin:2rem auto 0 auto;
-    transition:transform 0.1s ease;
+    transition:transform 0.1s ease, text-shadow 1s ease;
+}
+
+button.submit-btn:hover {
+    text-shadow:var(--transparent-clr-50) 0 0 5px,
+                var(--transparent-clr-50) 0 0 10px,
+                var(--transparent-clr-50) 0 0 20px;
 }
 
 button.submit-btn:active {
@@ -589,7 +602,101 @@ div.contact-info hr {
     border-top:1px solid var(--ocean-blue);
 }
 
-/* ===Footer=== */
+/* ===Analysis Page=== */
+div.analysis-wrapper {
+    display:grid;
+    grid-template-columns:auto auto;
+    grid-template-rows:1fr 1fr;
+    justify-content:center;
+    align-items:center;
+    padding:0 15% 15%;
+    gap:1rem;
+}
+
+.overlay-h2 {
+    color:var(--white);
+    font-size:var(--fs-label);
+    text-align:center;
+}
+
+article.analysis-btn h2 {
+    position:absolute;
+}
+
+article.analysis-btn {
+    position:relative;
+    cursor:pointer;
+    width:100%;
+    height:auto;
+    display:inline-block;
+}
+
+.studies-btn h2 {
+    top: 50%;          
+    left: 50%;         
+    transform: translate(-50%, -50%); /* Keeps it in the proper place when screen size shifts */
+}
+
+.int-systems-btn h2 {
+    top: 50%;          
+    left: 50%;        
+    transform: translate(-50%, -50%); /* Keeps it in the proper place when screen size shifts */
+}
+
+.testimonials-btn h2 {
+    top: 50%;          
+    left: 50%;         
+    transform: translate(-50%, -50%); /* Keeps it in the proper place when screen size shifts */
+}
+
+.types-btn h2 {
+    top: 50%;          
+    left: 50%;         
+    transform: translate(-50%, -50%); /* Keeps it in the proper place when screen size shifts */
+}
+
+/* ===---News Page---=== */
+div.news-wrapper {
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    gap:2rem;
+    padding-bottom:20%;
+    width:75%;
+    margin:auto;
+}
+
+article.news-btn {
+    position:relative;
+    cursor:pointer;
+    width:30rem;
+    height:auto;
+    margin:auto;
+}
+
+article.news-btn h2 {
+    position:absolute;
+} 
+
+.current-events-btn h2 {
+    top: 50%;          
+    left: 40%;         
+    transform: translate(-50%, -50%); /* Keeps it in the proper place when screen size shifts */
+}
+
+.petitions-btn h2 {
+    top: 50%;          
+    left: 40%;         
+    transform: translate(-50%, -50%); /* Keeps it in the proper place when screen size shifts */
+}
+
+.polls-btn h2 {
+    top: 50%;          
+    left: 40%;         
+    transform:translate(-50%, -50%); /* Keeps it in the proper place when screen size shifts */
+}
+
+/* ===---Footer---=== */
 footer {
     background:var(--gradient);
     color:white;
@@ -762,6 +869,10 @@ div.substack {
         margin-left:3rem;
         margin-top:0;
         padding:5%;
+    }
+    div.news-wrapper {
+        flex-direction:row;
+        padding-bottom:10%;
     }
 }
 
