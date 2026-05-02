@@ -35,9 +35,9 @@ function toggleText(btn) {
 
   if (moreText.style.display === "none") {
     moreText.style.display = "block";
-    btn.innerHTML = "Read Less";
+    btn.innerHTML = "...Read Less";
   } else {
     moreText.style.display = "none";
-    btn.innerHTML = "Read More";
+    btn.innerHTML = "Read More...";
   }
 }

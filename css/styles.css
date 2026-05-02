@@ -275,11 +275,14 @@ button.subscribe-button {
     padding: 3% 10%; 
     transform:translateY(80%);
     border:none;
-    transition:font-size 0.1s ease;
+    transition:font-size 0.1s ease, text-shadow 1s ease;
 }
 
 .subscribe-button:active {
     font-size:2.2rem;
+    text-shadow:var(--transparent-clr-50) 0 0 5px,
+                var(--transparent-clr-50) 0 0 10px,
+                var(--transparent-clr-50) 0 0 20px;
 }
 
 .subscribe-button-div {
@@ -785,11 +788,24 @@ button.submit-btn-forum {
     z-index:2;
     top:48%;
     left:88%;
+    transition:transform 0.1s ease;
+}
+
+button.submit-btn-forum:active {
+    transform:scale(1.0125);
 }
 
 #start-thread-container {
     position:relative;
     z-index:1;
+}
+
+.more-btn {
+    transition:transform 0.1s ease;
+}
+
+.more-btn:active {
+    transform:scale(1.0125);
 }
 /* ===---Footer---=== */
 footer {
