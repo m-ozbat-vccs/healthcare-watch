@@ -1,14 +1,14 @@
 /* Stylesheet for Healthcare Watch
 Marisa Ozbat - 2026 */
 
-/* ===RESET STYLESHEET=== */
+/* ===---RESET STYLESHEET---=== */
 * {
     padding:0;
     margin:0;
     box-sizing:border-box;
 }
 
-/* ===FONTS=== */
+/* ===---FONTS---=== */
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
 
 @font-face {
@@ -31,7 +31,7 @@ Marisa Ozbat - 2026 */
   font-style: normal;
 }
 
-/* ===VARIABLES=== */
+/* ===---VARIABLES---=== */
 :root {
     --gradient:linear-gradient(90deg,#0B5E4A, #0D5A62 50%, #0E577A 75%, #114FAA);
     --peacock-green:#0B5E4A;
@@ -48,7 +48,7 @@ Marisa Ozbat - 2026 */
     --black:black;
 }
 
-/* ===HEADINGS=== */
+/* ===---HEADINGS---=== */
 h1 {
     font-family: "Georama", sans-serif; 
     font-size:clamp(2.375rem, calc(2.250rem + 0.625vw), 3.000rem);
@@ -80,7 +80,7 @@ header a {
     font-size:var(--fs-nav);
 }
 
-/* ===NAV=== */
+/* ===---NAV---=== */
 
 nav ul {
     list-style-type:none;
@@ -122,7 +122,7 @@ a.hover-glow:hover {
     background-color:var(--white); 
 }
 
-/* ===Search=== */
+/* ===---Search---=== */
 .search-btn {
     background:none;
     border:none;
@@ -151,12 +151,13 @@ a.hover-glow:hover {
     height:5vh;
     color:var(--white);
     border:none;
+    cursor:pointer;
 }
 .search-input:focus {
     border:2px solid var(--transparent-clr-30);
     background-color:var(--transparent-clr-15);
 }
-/* ===BODY=== */
+/* ===---BODY---=== */
 body {
     font-family: "Parkinsans", sans-serif;
   font-optical-sizing: auto;
@@ -166,7 +167,7 @@ body {
   line-height:1.8; 
 }
 
-/* ===MAIN=== */
+/* ===---MAIN---=== */
 
 /* home page */
 main {
@@ -189,7 +190,7 @@ main a:hover {
 }
 
 
-/* ===OPENING BLOG AND ASIDE FLEXBOX=== */
+/* ===---OPENING BLOG AND ASIDE FLEXBOX---=== */
 div.home-blog-aside {
     display:flex;
     flex-direction:row;
@@ -329,7 +330,8 @@ button.read-more::before {
 button.read-more:hover {
   text-decoration:underline;
 }
-/* ===CARD-homepage FLEXBOX=== */
+
+/* ===---CARD-homepage FLEXBOX---=== */
 div.card-wrapper {
     display:flex;
     gap:3rem;
@@ -342,7 +344,7 @@ div.card-wrapper {
     
 }
 
-/* ===GRID WITHIN EACH CARD=== */
+/* ===---GRID WITHIN EACH CARD---=== */
 article.card {
     border:2px solid var(--ocean-blue); 
     border-radius:10px;
@@ -402,7 +404,7 @@ div.back-to-top { /* back to top Flexbox */
 }
 
 
-/* ===LOG IN/SIGN UP FORM=== */
+/* ===---LOG IN/SIGN UP FORM---=== */
 div.form-tabs {
     display:flex;
     justify-content:center;
@@ -538,9 +540,10 @@ div.about-wrapper {
     width:100%;
 }
 
-img.about-img {
+video.about-us {
     width:90%;
     margin:auto;
+    display:block;
 }
 
 h2.h2-center {
@@ -602,7 +605,7 @@ div.contact-info hr {
     border-top:1px solid var(--ocean-blue);
 }
 
-/* ===Analysis Page=== */
+/* ===---Analysis Page---=== */
 div.analysis-wrapper {
     display:grid;
     grid-template-columns:auto auto;
@@ -617,6 +620,13 @@ div.analysis-wrapper {
     color:var(--white);
     font-size:var(--fs-label);
     text-align:center;
+    transition:text-shadow 1s ease;
+}
+
+.overlay-h2:hover {
+    text-shadow:var(--transparent-clr-50) 0 0 5px,
+                var(--transparent-clr-50) 0 0 10px,
+                var(--transparent-clr-50) 0 0 20px;
 }
 
 article.analysis-btn h2 {
@@ -660,7 +670,7 @@ div.news-wrapper {
     display:flex;
     align-items:center;
     flex-direction:column;
-    gap:2rem;
+    gap:1.5rem;
     padding-bottom:20%;
     width:75%;
     margin:auto;
@@ -672,6 +682,7 @@ article.news-btn {
     width:30rem;
     height:auto;
     margin:auto;
+    flex:1 1 0;
 }
 
 article.news-btn h2 {
@@ -696,6 +707,90 @@ article.news-btn h2 {
     transform:translate(-50%, -50%); /* Keeps it in the proper place when screen size shifts */
 }
 
+/* ===---Forum Page---=== */
+ul.list-triangle { /* ul grid */
+    list-style:none;
+    display:grid;
+    justify-content:center;
+    padding:2rem 0;
+}
+
+article.trending h2,
+article.discussions h2 {
+    text-align:center;
+    padding-top:1rem;
+}
+article.trending,
+article.discussions {
+    border:2px solid var(--ocean-blue);
+    border-radius:15px;
+}
+
+article.trending {
+    width:80%;
+    margin:auto;
+}
+ul.list-triangle li {
+    position:relative;
+    margin:0 2rem; 
+    padding:0.75rem;
+}
+
+ul.list-triangle li::before {
+    content:"";
+        background-image:url(../images/arrow-marker.svg);
+        background-size:cover;
+        background-repeat:no-repeat;
+        position:absolute;
+        left:-2rem;
+        top:2.6rem;
+        transform:translateY(-100%);
+        height:2rem;
+        width:2rem;
+}
+
+div.forum-form {
+    border:2px solid var(--ocean-blue);
+    width:80%;
+    margin:2rem auto;
+    border-radius:15px;
+    padding:5%;
+}
+
+div.forum-form input,
+div.forum-form textarea {
+    width:100%;
+    padding:1rem;
+    border:2px solid var(--ocean-blue);
+    border-radius:0.5rem;
+    transition:transform 0.5s ease;
+}
+
+div.forum-form input:focus,
+div.forum-form textarea:focus {
+    background-color:var(--input-focus-clr);
+}
+
+div.forum-form input:active,
+div.forum-form textarea:active {
+    transform:scale(1.0125);
+}
+
+button.submit-btn-forum {
+    outline:none;
+    border:none;
+    padding:0.25rem 1.25rem;
+    cursor:pointer;
+    position:absolute;
+    z-index:2;
+    top:48%;
+    left:88%;
+}
+
+#start-thread-container {
+    position:relative;
+    z-index:1;
+}
 /* ===---Footer---=== */
 footer {
     background:var(--gradient);
@@ -874,6 +969,49 @@ div.substack {
         flex-direction:row;
         padding-bottom:10%;
     }
+    article.trending {
+        width:100%;
+        display:grid;
+        justify-content:center;
+    }
+    article.discussions {
+        width:40%;
+        display:grid;
+        justify-content:center;
+    }
+    ul.list-triangle {
+        display:inline-grid;
+        grid-template-columns:1fr 1fr;
+        justify-content:center;
+        align-items:center;
+        padding-left:1.5rem;
+    }
+    .more-btn {
+        outline:none;
+        border:none;
+        display:block;
+        margin:2rem auto;
+        padding:1rem 4rem;
+    }
+    .forum-main {
+        margin:0 3rem;
+    }
+   .forum-top-flex {
+        display:flex;
+        justify-content:center;
+        gap:20%;
+   }
+   .forum-btm-flex {
+        display:flex;
+        justify-content:center;
+        gap:20%;
+        margin-top:10rem;
+        margin-bottom:10rem;
+   }
+   div.forum-form {
+        width:100%;
+        margin:2rem auto;
+   }
 }
 
 /*===================
@@ -1005,6 +1143,10 @@ div.substack {
     div.contact-info {
         width:60%;
     }
+    button.submit-btn-forum {
+        left:80%;
+        top:55%;
+   }
 }
 
 /*====================================
