@@ -88,14 +88,14 @@
                     </article>
                     <!-- Desktop Version END GRID trending -->
                     <div class="forum-form">
-                        <form class="forum-form">
+                        <form class="forum-form" action="mailform.php" method="post" autocomplete="on">
                             <div>
                                 <label for="forum-subject">Subject:</label>
-                                    <input type="text" id="forum-subject" name="subject">
+                                    <input type="text" id="forum-subject" name="subject" required>
                             </div>
                             <label for="start-thread">Start a Thread:</label>
                             <div id="start-thread-container">
-                                    <textarea id="start-thread" name="start-thread" rows="6"></textarea>
+                                    <textarea id="start-thread" name="start-thread" rows="6" required></textarea>
                                 <button type="submit" class="submit-btn-forum hover-glow">
                                     <span>&#10148;</span>
                                     <!-- <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
