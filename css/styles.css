@@ -881,6 +881,28 @@ div.footer-logo:active {
         transform:scale(1.05);
 }
 
+.footer-icon:hover {
+    animation:jiggle 1s ease-in-out alternate infinite; 
+}
+
+@keyframes jiggle {
+    0% {
+        transform:rotate(15deg);
+    }
+    25% {
+        transform:rotate(-15deg);
+    }
+    50% {
+        transform:rotate(15deg);
+    }
+    75% {
+        transform:rotate(-15deg);
+    }
+    100% {
+        transform:rotate(15deg);
+    }
+}
+
 ul.footer-links-col1,
 ul.footer-links-col2,
 ul.footer-links-col3 {
